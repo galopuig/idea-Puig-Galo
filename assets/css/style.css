@@ -299,4 +299,12 @@ font-family: 'Teko', sans-serif;
   text-decoration: none;
 }
 
+/*FUENTES TIPOGRAFICAS*/
+.container-fluid{
+  font-family: 'Dosis', sans-serif;
+  font-size: large;
+}
 
+.page-footer{
+  font-family: 'Dosis', sans-serif;
+}
