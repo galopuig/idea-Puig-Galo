@@ -7,15 +7,29 @@ $font-family_1: 'Teko', sans-serif;
 $font-family_2: 'Dosis', sans-serif;
 $background-color_1: #0f545e;
 
-@charset "UTF-8";
+$estilos:(
+	background-color: grey,
+	font-color: orange,
+	align: center,
+	padding: 1rem,);
+
+
+
 @import "https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap";
 
-* {
+
+
+
+
+
+*{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
 }
+
+
 .navbar {
 	background-color: $background-color_1;
 	display: grid;
@@ -91,7 +105,25 @@ $background-color_1: #0f545e;
 		color: $color_3;
 		font-size: large;
 	}
+	.card .card-body{
+		color: map-get($map: $estilos, $key: color );
+		background-color: map-get($map: $estilos, $key: background-color);
+		align-items: map-get($map: $estilos, $key: align );
+		padding: map-get($map: $estilos, $key: padding );
+	}
+
+	.card .card-title{
+		font-weight: bolder;
+	}
+
+	.card .btn{
+		background-color: orange;
+		color: #0f0101;
+	}
+	
 }
+
+
 .musica {
 	height: 83vh;
 	background-image: url("/assets/img/montaña.jpg");
@@ -203,6 +235,12 @@ $background-color_1: #0f545e;
 			}
 		}
 	}
+
+	.bio .card{
+		grid-column: 2/10;
+		grid-row: 2/6;
+	}
+
 	.musica {
 		.musica-spotify {
 			grid-column: 2/10;
@@ -233,3 +271,4 @@ $background-color_1: #0f545e;
 		}
 	}
 }
+

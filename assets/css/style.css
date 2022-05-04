@@ -1,41 +1,34 @@
 @charset "UTF-8";
-@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap");
+@import "https://fonts.googleapis.com/css2?family=Dosis:wght@200&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Teko:wght@700&display=swap";
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box; }
 
-/*HEADER*/
 .navbar {
   background-color: #0f545e;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   align-items: center; }
+  .navbar .logo {
+    width: 60px;
+    height: 60px;
+    grid-column: 2/3; }
+  .navbar .menu {
+    grid-column: 3/8;
+    display: flex;
+    justify-content: space-around; }
+    .navbar .menu li {
+      list-style: none; }
+    .navbar .menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: large;
+      cursor: pointer; }
+  .navbar .menu-bar {
+    display: none; }
 
-.navbar .logo {
-  width: 60px;
-  height: 60px;
-  grid-column: 2/3; }
-
-.navbar .menu {
-  grid-column: 3/8;
-  display: flex;
-  justify-content: space-around; }
-
-.navbar .menu li {
-  list-style: none; }
-
-.navbar .menu a {
-  text-decoration: none;
-  color: #fff;
-  font-size: large;
-  cursor: pointer; }
-
-.navbar .menu-bar {
-  display: none; }
-
-/*MAIN*/
 .main {
   height: 83vh;
   background-image: url(/assets/img/ruta.jpg);
@@ -45,30 +38,25 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(8, 1fr); }
+  .main .main-content {
+    grid-column: 7/10;
+    grid-row: 3/7;
+    color: #fff; }
+    .main .main-content h3 {
+      font-family: "Teko", sans-serif;
+      font-size: medium;
+      color: white; }
+    .main .main-content h1 {
+      font-family: "Teko", sans-serif;
+      font-size: 5em;
+      color: black; }
+    .main .main-content p {
+      font-weight: 600;
+      padding: 10px;
+      margin-bottom: 10px;
+      color: black;
+      font-size: larger; }
 
-.main .main-content {
-  grid-column: 7/10;
-  grid-row: 3/7;
-  color: #fff; }
-
-.main .main-content h3 {
-  font-family: 'Teko', sans-serif;
-  font-size: medium;
-  color: white; }
-
-.main .main-content h1 {
-  font-family: 'Teko', sans-serif;
-  font-size: 5em;
-  color: black; }
-
-.main .main-content p {
-  font-weight: 600;
-  padding: 10px;
-  margin-bottom: 10px;
-  color: black;
-  font-size: larger; }
-
-/*  MAIN BIO */
 .bio {
   height: 83vh;
   background-image: url(/assets/img/hombre-salvaje.jpg);
@@ -78,14 +66,21 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(8, 1fr); }
+  .bio .bio-content {
+    grid-column: 2/10;
+    grid-row: 3/7;
+    color: black;
+    font-size: large; }
+  .bio .card .card-body {
+    background-color: grey;
+    align-items: center;
+    padding: 1rem; }
+  .bio .card .card-title {
+    font-weight: bolder; }
+  .bio .card .btn {
+    background-color: orange;
+    color: #0f0101; }
 
-.bio .bio-content {
-  grid-column: 2/10;
-  grid-row: 3/7;
-  color: black;
-  font-size: large; }
-
-/*MAIN MUSICA*/
 .musica {
   height: 83vh;
   background-image: url("/assets/img/montaña.jpg");
@@ -94,13 +89,11 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(8, 1fr); }
+  .musica .spotify {
+    grid-column: 2/10;
+    grid-row: 3/7;
+    color: #0f0101; }
 
-.musica .spotify {
-  grid-column: 2/10;
-  grid-row: 3/7;
-  color: #0f0101; }
-
-/*MAIN CONTACTO*/
 .contacto {
   height: 83vh;
   background-image: url("/assets/img/Participants in the Ona rite, Tierra Del Fuego, c_ 1900.jfif");
@@ -109,15 +102,13 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(8, 1fr); }
+  .contacto .formulario {
+    grid-column: 2/10;
+    grid-row: 3/7;
+    color: black;
+    font-size: large;
+    font-weight: bold; }
 
-.contacto .formulario {
-  grid-column: 2/10;
-  grid-row: 3/7;
-  color: black;
-  font-size: large;
-  font-weight: bold; }
-
-/*footer*/
 .footer {
   display: grid;
   height: 80px;
@@ -125,62 +116,71 @@
   background-color: #0f545e;
   color: #fff;
   grid-template-areas: "listen-online seguinos social-network"; }
+  .footer .listen-online {
+    grid-template-areas: "listen-online";
+    display: flex;
+    justify-content: center;
+    background-color: #0f545e;
+    padding: 20px;
+    color: #ffffff;
+    font-family: "Teko", sans-serif; }
+    .footer .listen-online .fas {
+      font-size: 1.5em;
+      margin-right: 20px; }
+  .footer .seguinos {
+    grid-template-areas: "seguinos";
+    text-align: center;
+    font-family: "Teko", sans-serif; }
+  .footer .social-network {
+    grid-template-areas: "social-network";
+    font-size: 2em; }
+    .footer .social-network .fa-brands {
+      text-decoration: none;
+      margin-right: 20px;
+      text-decoration: none;
+      margin-right: 20px; }
+    .footer .social-network .fa {
+      text-decoration: none;
+      text-decoration: none; }
 
-.footer .listen-online {
-  grid-template-areas: "listen-online";
-  display: flex;
-  justify-content: center;
-  background-color: #0f545e;
-  padding: 20px;
-  color: #ffffff;
-  font-family: 'Teko', sans-serif; }
+.container-fluid {
+  font-family: "Dosis", sans-serif;
+  font-size: large; }
 
-.footer .listen-online .fas {
-  font-size: 1.5em;
-  margin-right: 20px; }
+.page-footer {
+  font-family: "Dosis", sans-serif; }
 
-.footer .seguinos {
-  grid-template-areas: "seguinos";
-  text-align: center;
-  font-family: 'Teko', sans-serif; }
+.container .tituloMerch {
+  font-family: "Dosis", sans-serif; }
 
-.footer .social-network {
-  grid-template-areas: "social-network";
-  font-size: 2em; }
-
-.footer .social-network .fa-brands {
-  text-decoration: none;
-  margin-right: 20px; }
-
-.footer .social-network .fa {
-  text-decoration: none; }
+.page-description {
+  font-family: "Dosis", sans-serif;
+  color: white; }
 
 @media only screen and (max-width: 600px) {
-  /*main*/
   .main .main-content {
     grid-column: 2/10;
     grid-row: 5/ 8; }
-  .main .main-content h1 {
-    font-size: 3.5em; }
-  .main .main-content h3 {
-    font-size: 1em; }
-  /*main bio*/
+    .main .main-content h1 {
+      font-size: 3.5em; }
+    .main .main-content h3 {
+      font-size: 1em; }
   .bio .bio-content {
     grid-column: 2/10;
     grid-row: 2/ 8; }
-  .bio .bio-content h1 {
-    font-size: 3.5em; }
-  .bio .bio-content h3 {
-    font-size: 1em; }
-  /*main musica*/
+    .bio .bio-content h1 {
+      font-size: 3.5em; }
+    .bio .bio-content h3 {
+      font-size: 1em; }
+  .bio .card {
+    grid-column: 2/10;
+    grid-row: 2/6; }
   .musica .musica-spotify {
     grid-column: 2/10;
     grid-row: 2/ 8; }
-  /*main contacto*/
   .contacto .formulario {
     grid-column: 2/10;
     grid-row: 2/ 8; }
-  /*footer*/
   .footer .seguinos {
     display: none;
     text-align: center; }
@@ -190,29 +190,6 @@
     margin-right: 15px;
     background-color: #0f545e;
     text-align: center; }
-  .footer .social-network .fab {
-    font-size: 1.3em;
-    margin-right: 15px; } }
-
-.footer .social-network .fa-brands {
-  text-decoration: none;
-  margin-right: 20px; }
-
-.footer .social-network .fa {
-  text-decoration: none; }
-
-/*FUENTES TIPOGRAFICAS*/
-.container-fluid {
-  font-family: 'Dosis', sans-serif;
-  font-size: large; }
-
-.page-footer {
-  font-family: 'Dosis', sans-serif; }
-
-/*MAIN MERCH*/
-.container .tituloMerch {
-  font-family: 'Dosis', sans-serif; }
-
-.page-description {
-  font-family: 'Dosis', sans-serif;
-  color: white; }
+    .footer .social-network .fab {
+      font-size: 1.3em;
+      margin-right: 15px; } }
